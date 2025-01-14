@@ -4,9 +4,11 @@ public class BankAccount {
     private int accountNumber;
     private double balance;
 
-    public BankAccount(String accountName, int accountNumber, double balance) {
+    private int accountIncrementer = 100;
+
+    public BankAccount(String accountName, double balance) {
         this.accountName = accountName;
-        this.accountNumber = accountNumber;
+        this.accountNumber = accountIncrementer++;
         this.balance = balance;
     }
 

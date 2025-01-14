@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Driver {
-    private ArrayList<BankAccount> accounts = new ArrayList<>();
+    private static ArrayList<BankAccount> accounts = new ArrayList<>();
 
     public static void main(String[] args) {
-        
+
     }
 
     public static void menu(){
@@ -29,7 +29,18 @@ public class Driver {
                 case 1:
                     System.out.println("Please enter your name: ");
                     String name = input.next();
-                    System.out.println("Please enter your address: ");
+                    System.out.println("Please enter your current balance: ");
+                    double balance = input.nextDouble();
+
+                    BankAccount account = new BankAccount(name, balance);
+                    accounts.add(account);
+
+                    System.out.println("Your account has been created.\n" +
+                            "Your account number is " + account.getAccountNumber() + "\n" +
+                            "**Please Remember this number**");
+                    break;
+                case 2:
+                    
 
             }
         }

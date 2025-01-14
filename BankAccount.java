@@ -12,15 +12,19 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public void deposit(double amount) {
+    private void deposit(double amount) {
         balance += (amount > 0) ? amount : 0;
     }
 
-    public void withdraw(double amount) {
+    private void withdraw(double amount) {
         balance -= (amount >= balance) ? amount : 0;
     }
 
-    public String displayAccountDetails(){
+    public int getAccountNumber(){
+        return accountNumber;
+    }
+
+    String displayAccountDetails(){
         return "Name: " + accountName + "\n"
                 + "Number: " + accountNumber + "\n"
                 + "Balance: " + balance;
